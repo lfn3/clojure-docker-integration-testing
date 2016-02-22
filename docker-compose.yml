@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  database:
+    build: .
+    command: java -jar /docker-testing-demo-0.1.0-SNAPSHOT-standalone.jar database
+  server:
+    build: .
+    command: java -jar /docker-testing-demo-0.1.0-SNAPSHOT-standalone.jar server
+  test:
+    build: .
+    command: java -jar /docker-testing-demo-0.1.0-SNAPSHOT-standalone.jar 
